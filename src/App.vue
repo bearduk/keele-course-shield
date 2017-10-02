@@ -1,8 +1,18 @@
 <template>
 
   <div class="shield course-finder">
-    <h1 v-html="msg"></h1>    <!-- remove me later on !-->
-    {{selectedLevel}}
+    
+    <!-- remove me later on from here !-->
+    
+    <h1 v-html="msg"></h1>
+    <p>output bound data for testing:</p>
+    <p>Selected level (this needs to be 'required'): {{ selectedLevel }}</p>
+    <p>Search term: {{ searchString }}</p>
+    <p>end test output</p>
+    <hr />
+
+    <!-- .to here !-->
+
     <div class="shield__content">
       <svg class="svg-icon " width="40px" height="40px">
         <use xlink:href="/media/svg/sprite.svg#icon-course-finder"></use>
