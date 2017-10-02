@@ -97,7 +97,7 @@ export default {
   methods: {
     kSearchMethod() {
       // console.log(this.searchString);
-      window.location = 'https://webstage.keele.ac.uk/docs/alg-keele/?q=' + this.searchString + '&p=0&dFR%5BcourseLevelName%5D%5B0%5D=' + this.selectedLevel;
+      window.location = 'https://www.keele.ac.uk/docs/alg-keele/?q=' + this.searchString + '&p=0&dFR%5BcourseLevelName%5D%5B0%5D=' + this.selectedLevel;
       // window.location = 'https://www.google.com';
     }
   }
