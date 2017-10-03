@@ -8,6 +8,7 @@
     <p>output bound data for testing:</p>
     <p>Selected level (this needs to be 'required'): {{ selectedLevel }}</p>
     <p>Search term: {{ searchString }}</p>
+    <p>Computed property, url target for button: {{ urlAlgolia }}</p>
     <p>end test output</p>
     <hr />
 
@@ -97,8 +98,13 @@ export default {
   methods: {
     kSearchMethod() {
       // console.log(this.searchString);
-      window.location = 'https://www.keele.ac.uk/docs/alg-keele/?q=' + this.searchString + '&p=0&dFR%5BcourseLevelName%5D%5B0%5D=' + this.selectedLevel;
+      window.location = this.urlAlgolia;
       // window.location = 'https://www.google.com';
+    }
+  },
+  computed: {
+    urlAlgolia: function () {
+      return 'https://www.keele.ac.uk/docs/alg-keele/?q=' + this.searchString + '&p=0&dFR%5BcourseLevelName%5D%5B0%5D=' + this.selectedLevel;
     }
   }
 }
