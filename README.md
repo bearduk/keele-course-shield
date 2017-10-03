@@ -4,6 +4,13 @@
 
 Binds the select box and search query and uses them to set the url triggered when pressing the button.
 
+If you need to disable the button if no level is selected, you can do the following:
+
+`<button role="button" type="submit" aria-label="Search Courses" aria-title="Search Courses" title="Search Courses" @click.prevent="kSearchMethod" :disabled="selectedLevel == 'requiredLevel'">`
+and
+`selectedLevel: 'requiredLevel'`
+
+
 ## Build Setup
 
 ``` bash
